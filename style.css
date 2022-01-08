@@ -95,6 +95,7 @@ main {
     height: 100%;
     width: 120%;
     opacity: 70%;
+    z-index: 1;
 }
 
 
@@ -106,6 +107,54 @@ main {
 }
 
 .rightSide {
+    position: relative;
+}
+#background {
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 120%;
     background-color: var(--accent);
+    z-index: 2;
+    opacity: 50%;
+}
+
+
+@media screen and (max-width:600px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+
+
+    }
+
+    #img {
+        width: 100%;
+        order: 0;
+    }
+    .leftSide {
+        order:2
+    }
+
+    #background {
+        width: 100%;
+    }
+
+    .stats {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        order: 3;
+    }
+
+
+    #twelve {
+        margin-left: -8px;
+    }
 
 }
